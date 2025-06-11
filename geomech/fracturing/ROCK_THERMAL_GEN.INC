@@ -1,0 +1,8 @@
+EQUALS
+THCGAS 12.4 6* /  -- kJ/m/d/K
+THCOIL 18.69 6* /  -- kJ/m/d/K
+THCWATER 49.84 6* /  -- kJ/m/d/K
+THCROCK 124.0 6* /  -- kJ/m/d/K
+HEATCR 2146.1201856 6*/
+HEATCRT 0 6*/
+/
