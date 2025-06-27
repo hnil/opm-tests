@@ -26,8 +26,11 @@
         },
         "solver":{
             "method":"if_propagate_trimesh",
-	    "efac":0.5,
-	    "rfac":0.1,
+            "target_cellcount", 100,
+            "cellcount_threshold", 400,
+	        "efac":0.5,
+	        "rfac":0.1,
+            "max_expand_iter":20,
             "max_iter":100,
             "damping": 1e0,
             "min_width":0.0,
@@ -44,7 +47,7 @@
         },
         "reservoir":{
             "dist":1e1,
-            "calculate_dist":false,
+            "calculate_dist":true,
             "mobility":1.3e-3,
             "perm":1e-13
         },
@@ -53,7 +56,7 @@
             "rate":2.9e-2,
             "WI":1.0e-11
         },
-	"KMax":1e6,
+	"KMax":1e7,
         "extended_fractures":true,
         "fractureWI":0.1,
         "write_pressure_system":false,
