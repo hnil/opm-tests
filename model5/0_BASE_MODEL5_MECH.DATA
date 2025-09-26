@@ -110,6 +110,18 @@ EQUALS
 INCLUDE
  '../geomech/fracturing/GRID_MECHUNIFORM.INC' /
 /
+--DIMENS
+-- 20 30 10 /
+
+BCCON
+         1       1 1 4*         X- /
+         2       10 10 4*        X+ /
+         3       2* 1 1  2*        Y- /
+         4       2* 30 30  2*        Y+ /
+         5       4* 1 1       Z- /
+         6       4* 10 10     Z+ /
+/
+
 
 ------------------------------------------------------------------------------------------------
 EDIT
@@ -201,7 +213,7 @@ SCHEDULE
 --
 
 include
-  '../geomech/fracturing/SCHEDULE_MECH.INC'
+  '../geomech/fracturing/SCHEDULE_ONLY_MECH.INC'
 /
 
 TUNING

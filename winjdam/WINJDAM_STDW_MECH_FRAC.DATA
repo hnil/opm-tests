@@ -349,6 +349,14 @@ SUMMARY
 INCLUDE
   'include/WINJDAM-SUMMARY.inc' /
 
+CFCFFRAC
+ 'INJ-1'*/
+/
+
+CFCFRATE
+ 'INJ-1'*/
+/        
+    
 BPR
     5 7 7/
     5 7 6/
@@ -386,6 +394,9 @@ CPR
 CWIR
 4*/
 /
+CWIT
+4*/
+/    
 
 COPR
 4*/
@@ -398,6 +409,57 @@ CWPR
 CGPR
 4*/
 /
+CFRWDAVG
+ 'INJ-1'*/
+/
+CFRWDMIN
+ 'INJ-1'*/
+/
+CFRWDMAX
+ 'INJ-1'*/
+/
+CFRPAVG
+ 'INJ-1'*/
+/
+CFRPMIN
+ 'INJ-1'*/
+/
+CFRPMAX
+ 'INJ-1'*/
+/
+    
+CFRAREA
+'INJ-1'*/
+/
+
+CFRLENGT
+'INJ-1'*/
+/
+
+CFRHEIGH
+'INJ-1'*/
+/
+
+CFRFLUX
+'INJ-1'*/
+/
+CFRVOLUM
+'INJ-1'*/
+/
+CFRFVOLU
+'INJ-1'*/
+/
+CFRWI
+'INJ-1'*/
+/
+
+        
+CFRAVGW
+'INJ-1'*/
+/
+CFRAVGFW
+'INJ-1'*/
+/                                        
 
 
 -- ===================================================================

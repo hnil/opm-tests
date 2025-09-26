@@ -624,7 +624,7 @@ TUNING
 1 10  0.1  0.15  3  0.3  0.3  1.20  /
 5*   0.1   0.0001   0.02  0.02  /
 2* 40 1* 15 /
-/
+
 
 -- only possible for ECL 2006.2+ version
 ZIPPY2

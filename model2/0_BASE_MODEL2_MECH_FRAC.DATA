@@ -118,8 +118,9 @@ INCLUDE
  'include/permz.grdecl'/
 
 INCLUDE
- '../geomech/fracturing/GRID_MECHUNIFORM.INC' /
-/
+ '../geomech/fracturing/GRID_MECHUNIFORM.INC'
+ /
+
 
 EQUALS
  CSTRESS 1e100 6*/
@@ -199,8 +200,9 @@ THPRES
 /
 
 INCLUDE
- '../geomech/fracturing/EQUIL_MECH.INC'/
+ '../geomech/fracturing/EQUIL_MECH.INC'
 /
+
 
 ------------------------------------------------------------------------------------------------
 SUMMARY
@@ -214,6 +216,11 @@ INCLUDE
 ------------------------------------------------------------------------------------------------
 SCHEDULE
 ------------------------------------------------------------------------------------------------
+TSTEP
+1
+/
+END
+
 include
   '../geomech/fracturing/SCHEDULE_MECH.INC'
 / 
