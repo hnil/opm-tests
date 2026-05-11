@@ -1,0 +1,375 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         # 
+ #####     #         #      #    #   #   #  
+ #         #         #      #     # # # #   
+ #         #######    ######       #   #    
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org 
+
+Flow Version     =  2026.04-pre (0602f376f)
+Machine name     =  Halvors-MBP.sintef.no (Number of logical cores: 14, Memory size: 24576.00 MB) 
+Operating system =  Darwin arm64 (Kernel: 25.3.0, Darwin Kernel Version 25.3.0: Wed Jan 28 20:48:41 PST 2026; root:xnu-12377.81.4~5/RELEASE_ARM64_T6041 )
+Build time       =  2026-03-23 at 17:41:19 hrs
+User             =  hnil
+Simulation started on 27-03-2026 at 15:15:40 hrs
+Using 1 MPI processes with 1 OMP threads on each 
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+EclDeckFileName="../../opm-tests/spe1/SPE1CASE3_SMALL.DATA" # default: ""
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AddCorners="0"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="1"
+ConserveInnerEnergyThermal="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+CprWeightsThreadParallel="0"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DebugVerbosityLevel="1"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeConformal="0"
+EdgeWeightsMethod="transmissibility"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDriftCompensationTemp="1"
+EnableDryRun="auto"
+EnableEclOutput="1"
+EnableEsmry="1"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableOpmRstFile="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableTuning="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheck="1"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ExternalPartition=""
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+FullTimeStepInitially="0"
+GpuAwareMpi="0"
+GpuDeviceId="0"
+HybridNewtonConfigFile="hybridNewtonConfig.json"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+ImbalanceTol="1.1"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverAccelerator="cpu"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverReduction="0.01"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitionWellNeighborLevels="1"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="99"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWellStatusSwitchForWells="99"
+MaxWellStatusSwitchInInnerIterWells="99"
+MaxWelleqIter="30"
+MaximumNumberOfGroupSwitches="3"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MetisParams="default"
+MiluVariant="ilu"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepBeforeShuttingProblematicWellsInDays="0.01"
+MinTimeStepSize="0"
+NetworkMaxOuterIterations="3"
+NetworkMaxPressureUpdateInBars="5"
+NetworkMaxStrictOuterIterations="10"
+NetworkMaxSubIterations="100"
+NetworkPressureUpdateDampingFactor="0.1"
+NewtonMaxError="1e+100"
+NewtonMaxIterations="20"
+NewtonMaxRelax="0.5"
+NewtonMinIterations="2"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NlddRelativeMobilityChangeTol="0.1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumOverlap="1"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+NupcolGroupRateTolerance="0.001"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputDir=""
+OutputExtraConvergenceInfo="none"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PartitionMethod="zoltanwell"
+PreSolveNetwork="1"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedMaxPvFraction="0.03"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+SerialPartitioning="0"
+ShutUnsolvableWells="1"
+Slave="0"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="1"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlMaxReductionTimeStep="0.1"
+TimeStepControlParameters="0.125;0.25;0.125;0.75;0.25"
+TimeStepControlRejectCompletedStep="0"
+TimeStepControlSafetyFactor="0.8"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepControlToleranceTestVersion="standard"
+TimeStepVerbosity="1"
+ToleranceCnv="0.01"
+ToleranceCnvEnergy="0.4182"
+ToleranceCnvEnergyRelaxed="41.82"
+ToleranceCnvRelaxed="1"
+ToleranceEnergyBalance="4.182e-06"
+ToleranceEnergyBalanceRelaxed="4.182e-05"
+ToleranceMaxDp="0"
+ToleranceMaxDrs="0"
+ToleranceMaxDrv="0"
+ToleranceMaxDs="0"
+ToleranceMb="1e-07"
+ToleranceMbRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseGmres="0"
+UseHybridNewton="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VerifyGpuAwareMpi="0"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+WellGroupConstraintsMaxIterations="1"
+ZoltanImbalanceTol="1.1"
+ZoltanParams="graph"
+ZoltanPhgEdgeSizeThreshold="0.35"
+
+Reading deck file '../../opm-tests/spe1/SPE1CASE3_SMALL.DATA'
+    0 Reading RUNSPEC  in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 17
+    1 Reading TITLE    in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 20
+    2 Reading DIMENS   in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 23
+    3 Reading EQLDIMS  in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 28
+    4 Reading TABDIMS  in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 33
+    5 Reading OIL      in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 37
+    6 Reading GAS      in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 38
+    7 Reading WATER    in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 39
+    8 Reading DISGAS   in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 40
+    9 Reading FIELD    in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 45
+   10 Reading START    in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 47
+   11 Reading WELLDIMS in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 50
+   12 Reading UNIFIN   in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 61
+   13 Reading UNIFOUT  in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 62
+   14 Reading GRID     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 64
+   15 Reading INIT     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 71
+   16 Reading NOECHO   in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 74
+   17 Reading DX       in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 76
+   18 Reading DY       in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 79
+   19 Reading DZ       in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 82
+   20 Reading TOPS     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 86
+   21 Reading PORO     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 90
+   22 Reading PERMX    in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 94
+   23 Reading PERMY    in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 98
+   24 Reading PERMZ    in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 102
+   25 Reading PROPS    in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 106
+   26 Reading ECHO     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 107
+   27 Reading PVTW     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 110
+   28 Reading ROCK     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 123
+   29 Reading SWOF     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 130
+   30 Reading SGOF     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 159
+   31 Reading DENSITY  in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 189
+   32 Reading PVDG     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 199
+   33 Reading PVTO     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 220
+   34 Reading SOLUTION in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 250
+   35 Reading EQUIL    in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 253
+   36 Reading RSVD     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 273
+   37 Reading SUMMARY  in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 281
+   38 Reading FOPR     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 285
+   39 Reading WGOR     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 289
+   40 Reading FGOR     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 294
+   41 Reading WBHP     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 301
+   42 Reading WGIR     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 305
+   43 Reading WGIT     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 309
+   44 Reading WGPR     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 313
+   45 Reading WGPT     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 317
+   46 Reading WOIR     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 321
+   47 Reading WOIT     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 325
+   48 Reading WOPR     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 329
+   49 Reading WOPT     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 333
+   50 Reading WWIR     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 337
+   51 Reading WWIT     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 341
+   52 Reading WWPR     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 345
+   53 Reading WWPT     in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 349
+   54 Reading SCHEDULE in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 353
+   55 Reading RPTSCHED in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 355
+   56 Reading RPTRST   in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 358
+   57 Reading WELSPECS in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 369
+   58 Reading COMPDAT  in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 378
+   59 Reading WCONPROD in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 388
+   60 Reading WCONINJE in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 397
+   61 Reading TSTEP    in ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA line 405
+Unsupported keywords or keyword items:
+
+  NOECHO: keyword not supported
+  In file: ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA, line 74
+
+  ECHO: keyword not supported
+  In file: ../../opm-tests/spe1/SPE1CASE3_SMALL.DATA, line 107
+
+Creating grid from keywords DX, DY, DZ and TOPS
+
+An error occurred while creating the reservoir properties
+Internal error: DX size mismatch
+
+Unrecoverable errors while loading input:
+DX size mismatch
+
+
+Error summary:
+Warnings          1
+Info              64
+Errors            2
+Bugs              0
+Debug             0
+Problems          0
+
