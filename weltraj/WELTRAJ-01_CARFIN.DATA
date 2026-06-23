@@ -415,8 +415,8 @@ WELTRAJ
 COMPTRAJ 
 -- WELL	 BRANCH  PERF	  PERF    PERF COMPL STATE SAT    CONN DIAM	KH	SKIN D_FACT 
 -- NAME  NO      TOP      BOT     REF  NO    --    TABLE  FACT --   --  --   --     
-  'PROD' 1* 8325.0 8425.0 1* 1* 1* 1* 50 0.5 50 0.1 1* /
-  'INJ' 1* 8325.0 8400.0 1* 1* 1* 1* 50 0.5 50 0.1 1* /
+  'PROD' 1* 8325.0 8425.0 1* 1* 1* 1* 1* 0.5 1* 0.1 1* /
+  'INJ' 1* 8325.0 8400.0 1* 1* 1* 1* 1* 0.5 1* 0.1 1* /
 /
 
 WCONPROD
