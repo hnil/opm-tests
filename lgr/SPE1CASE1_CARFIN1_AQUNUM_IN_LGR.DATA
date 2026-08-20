@@ -68,13 +68,10 @@ GRID
 
 CARFIN
 -- NAME I1-I2 J1-J2 K1-K2 NX NY NZ
-'LGR1'  5  6  5  6  1  3  6  6  9 /
+'LGR1'  1  2  1  2  1  3  6  6  9 /
 ENDFIN
 
-CARFIN
--- NAME I1-I2 J1-J2 K1-K2 NX NY NZ
-'LGR2'  8  9  8  9  1  3  6  6  9 /
-ENDFIN
+
 
 -- The INIT keyword is used to request an .INIT file. The .INIT file
 -- is written before the simulation actually starts, and contains grid
@@ -117,23 +114,25 @@ PERMZ
 	100*500 100*50 100*200 /
 ECHO
 
--- One producer and one numerical aquifer, over two CARFIN boxes.  The aquifer
--- cell (1,1,1) and its connection cell (10,10,3) both lie outside the refined
--- boxes, so the connection is an ordinary level-zero NNC -- but its
--- transmissibility lives on the leaf grid, which refinement makes distinct from
--- the level-zero grid.  Confusing the two aborts the run before the first step.
+-- One producer and one numerical aquifer whose CONNECTION CELL (1,1,1) lies
+-- INSIDE the refined box, on the outer boundary -- the arrangement a CARFIN
+-- placed against the edge of a model produces.
 --
--- With no injector the field depletes, so the aquifer influx (AAQR) is what
--- holds the pressure up: comparing it against the same deck without the CARFIN
--- checks that the refinement does not disturb the aquifer.
+-- NOT YET SUPPORTED.  The coarse cell is not on the leaf grid, so neither is
+-- the NNC face carrying the aquifer connection: the aquifer is disconnected and
+-- ANQR stays zero for the whole run, where the same deck without the CARFIN
+-- reaches ANQT ~ 9 sm3.  flow says so ("explicit connection(s) ... name a cell
+-- pair the grid does not join"); this deck exists to pin that message, and to
+-- become the regression test once the connection is carried onto the refined
+-- cells.
 AQUNUM
 -- id  i j k   area   length  poro  perm  depth  p_init  pvt  sat
-    1  1 1 1  1000000  1000    0.25  100   8400   350     1    1 /
+    1  10 1 1  1000000  1000    0.25  100   8400   350     1    1 /
 /
 
 AQUCON
 -- id  i1 i2  j1 j2  k1 k2  face  mult
-    1  10 10  10 10   3  3  'I+'   1.0 /
+    1   1  1   1  1   1  1  'I-'   1.0 /
 /
 
 PROPS
