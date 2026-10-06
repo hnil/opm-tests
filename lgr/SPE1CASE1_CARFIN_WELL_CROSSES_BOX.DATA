@@ -10,14 +10,10 @@
 -- Black-Oil Reservoir Simulation Problem' by Aziz S. Odeh,
 -- Journal of Petroleum Technology, January 1981
 
--- LGR test: a pinched-out layer next to, or inside, a CARFIN box. 10x10x5;
--- layer 3 is pinched out (a 0.5 ft layer removed by MINPV), so layers 1-2 reach layers 4-5 only through
--- the PINCH connection. The producer (layer 1) depletes at a fixed BHP above
--- the bubble point; no injection. Cumulative oil measures the pore volume the
--- producer reaches: about 1.8e6 STB when the pinch connects the layers, and
--- 1.0e6 STB when it does not (SPE1CASE1_CARFIN_PINCH_SEALED).
--- CARFIN refines layer 2, above the pinch.
--- Expected: about 1.8e6 STB of oil, as without the box.
+-- LGR test: the producer is completed in layers 2-3 of (10,10) and box LGR3
+-- refines layer 3 only, so the well has connections in the refined and the
+-- unrefined grid.
+-- Expected: refused at setup, naming the well and the unrefined cell [10,10,2].
 
 
 
@@ -32,7 +28,7 @@ TITLE
    SPE1 - CASE 1
 
 DIMENS
-   10 10 5 /
+   10 10 3 /
    
 -- The number of equilibration regions is inferred from the EQLDIMS
 -- keyword.
@@ -65,21 +61,25 @@ WELLDIMS
 -- 	   - we are dealing with only one 'group'
 -- Item 4: maximum number of wells in any one group
 -- 	   - there must be two wells in a group as there are two wells in total
-   2 4 1 2 /
+   2 2 1 2 /
 
 UNIFOUT
 
 GRID
 
-PINCH
- 0.1 'GAP' 1* 'TOPBOT' 'TOP' /
-MINPV
- 100 /
 CARFIN
-'LGR1' 1 10 1 10 2 2 20 20 2 /
+-- NAME I1-I2 J1-J2 K1-K2 NX NY NZ
+'LGR1'  5  6  5  6  1  3  6  6  9 /
 ENDFIN
 
+CARFIN
+-- NAME I1-I2 J1-J2 K1-K2 NX NY NZ
+'LGR2'  7  8  7  8  1  3  6  6  9 /
+ENDFIN
 
+CARFIN
+'LGR3'  9 10  9 10  3  3  6  6  3 /
+ENDFIN
 
 -- The INIT keyword is used to request an .INIT file. The .INIT file
 -- is written before the simulation actually starts, and contains grid
@@ -91,27 +91,35 @@ INIT
 
 -- -------------------------------------------------------------------------
 DX 
-500*1000 /
+-- There are in total 300 cells with length 1000ft in x-direction	
+   	300*1000 /
 DY
-500*1000 /
+-- There are in total 300 cells with length 1000ft in y-direction	
+	300*1000 /
 DZ
-100*20 100*30 100*0.5 100*30 100*50 /
+-- The layers are 20, 30 and 50 ft thick, in each layer there are 100 cells
+	100*20 100*30 100*50 /
 
 TOPS
 -- The depth of the top of each grid block
 	100*8325 /
 
 PORO
-200*0.3 100*0.001 200*0.3 /
+-- Constant porosity of 0.3 throughout all 300 grid cells
+   	300*0.3 /
 
 PERMX
-100*500 100*50 100*200 100*50 100*500 /
+-- The layers have perm. 500mD, 50mD and 200mD, respectively.
+	100*500 100*50 100*200 /
 
 PERMY
-100*500 100*50 100*200 100*50 100*500 /
+-- Equal to PERMX
+	100*500 100*50 100*200 /
 
 PERMZ
-100*500 100*50 100*200 100*50 100*500 /
+-- Cannot find perm. in z-direction in Odeh's paper
+-- For the time being, we will assume PERMZ equal to PERMX and PERMY:
+	100*500 100*50 100*200 /
 ECHO
 
 PROPS
@@ -401,8 +409,8 @@ WELSPECS
 
 COMPDAT
 -- Item #: 1	2	3	4	5	6	7	8	9
-	'PROD'	10	10	1	1	'OPEN'	1*	1*	0.5 /
-	'INJ'	1	1	5	5	'OPEN'	1*	1*	0.5 /
+	'PROD'	10	10	2	3	'OPEN'	1*	1*	0.5 /
+	'INJ'	1	1	1	1	'OPEN'	1*	1*	0.5 /
 /
 -- Coordinates in item 2-5 are retreived from Odeh's figure 1 and 2 
 -- Item 9 is the well bore internal diameter, 
@@ -411,7 +419,7 @@ COMPDAT
 
 WCONPROD
 -- Item #:1	2      3     4	   5  9
-	'PROD' 'OPEN' 'BHP' 5* 4100 /
+	'PROD' 'OPEN' 'ORAT' 20000 4* 1000 /
 /
 -- It is stated in Odeh's paper that the maximum oil prod. rate
 -- is 20 000stb per day which explains the choice of value in item 4.
@@ -420,7 +428,7 @@ WCONPROD
 
 WCONINJE
 -- Item #:1	 2	 3	 4	5      6  7
-	'INJ'	'GAS'	'SHUT'	'RATE'	100000 1* 9014 /
+	'INJ'	'GAS'	'OPEN'	'RATE'	100000 1* 9014 /
 /
 -- Stated in Odeh that gas inj. rate (item 5) is 100MMscf per day
 -- BHP upper limit (item 7) should not be exceeding the highest

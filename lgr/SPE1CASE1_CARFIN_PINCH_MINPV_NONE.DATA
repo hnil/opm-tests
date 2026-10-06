@@ -12,12 +12,12 @@
 
 -- LGR test: a pinched-out layer next to, or inside, a CARFIN box. 10x10x5;
 -- layer 3 is pinched out (a 0.5 ft layer removed by MINPV), so layers 1-2 reach layers 4-5 only through
--- the PINCH connection. The producer (layers 1-2) depletes at a fixed BHP above
+-- the PINCH connection. The producer (layer 1) depletes at a fixed BHP above
 -- the bubble point; no injection. Cumulative oil measures the pore volume the
--- producer reaches: about 1.95e6 STB when the pinch connects the layers, and
--- 1.05e6 STB when it does not (SPE1CASE1_CARFIN_PINCH_SEALED).
+-- producer reaches: about 1.8e6 STB when the pinch connects the layers, and
+-- 1.0e6 STB when it does not (SPE1CASE1_CARFIN_PINCH_SEALED).
 -- No CARFIN box.
--- Expected: about 1.95e6 STB of oil.
+-- Expected: about 1.8e6 STB of oil.
 
 
 
@@ -398,7 +398,7 @@ WELSPECS
 
 COMPDAT
 -- Item #: 1	2	3	4	5	6	7	8	9
-	'PROD'	10	10	1	2	'OPEN'	1*	1*	0.5 /
+	'PROD'	10	10	1	1	'OPEN'	1*	1*	0.5 /
 	'INJ'	1	1	5	5	'OPEN'	1*	1*	0.5 /
 /
 -- Coordinates in item 2-5 are retreived from Odeh's figure 1 and 2 
