@@ -13,7 +13,9 @@
 -- LGR test: the producer is completed in layers 2-3 of (10,10) and box LGR3
 -- refines layer 3 only, so the well has connections in the refined and the
 -- unrefined grid.
--- Expected: refused at setup, naming the well and the unrefined cell [10,10,2].
+-- Expected: runs. The producer keeps its layer-2 connection in the global grid
+-- and has its layer-3 connection converted into LGR3; results close to a box
+-- over both layers (BHP 3567 against 3574 psi at day 365), serial and parallel.
 
 
 
